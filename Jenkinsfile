@@ -12,15 +12,9 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Start App') {
             steps {
-                bat 'echo Build successful'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                bat 'echo Testing successful'
+                bat 'start /B node server.js'
             }
         }
     }
